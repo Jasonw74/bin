@@ -1,4 +1,4 @@
-#!/bin/ksh
+pictures pictures #!/bin/ksh
 
 got() {
 	local _cmd
@@ -42,4 +42,6 @@ randport() {
 
 v6suffix() {
 	perl -E 'say join(":", `openssl rand 8 -hex` =~ /.{4}/g)'
+}
+# ksh -x /etc/rc.d/isc_named1 start
 }
