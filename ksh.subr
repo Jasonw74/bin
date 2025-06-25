@@ -45,3 +45,19 @@ v6suffix() {
 }
 # ksh -x /etc/rc.d/isc_named1 start
 }
+pictures pictures #!/bin/ksh
+
+got() {
+	local _cmd
+	if [ $# -ge 1 ]; then
+		_cmd="got-$1"
+		if command -v "${_cmd}" >/dev/null; then
+			shift
+			"${_cmd}" "$@"
+			return
+		fi
+	fi
+	command got "$@"
+}
+
+g
